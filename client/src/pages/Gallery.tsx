@@ -14,6 +14,7 @@ export default function Gallery() {
       category: "Hardscaping",
       before: "Before: Plain backyard",
       after: "After: Beautiful stone patio",
+      image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663482553895/LPaz92cnRdeSnN7Fr9fQ49/hardscape-patio-SAJy3h4Sd4k2hkqvdjbDwR.webp",
     },
     {
       id: 2,
@@ -21,6 +22,7 @@ export default function Gallery() {
       category: "Softscaping",
       before: "Before: Overgrown garden",
       after: "After: Lush native plantings",
+      image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663482553895/LPaz92cnRdeSnN7Fr9fQ49/softscape-garden-hJXrjGMidHBL6xMDRGdvhD.webp",
     },
     {
       id: 3,
@@ -28,6 +30,7 @@ export default function Gallery() {
       category: "Hardscaping",
       before: "Before: Sloped yard",
       after: "After: Terraced landscape",
+      image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663482553895/LPaz92cnRdeSnN7Fr9fQ49/retaining-wall-b7z334HP58fFmb7Nww8z9H.webp",
     },
     {
       id: 4,
@@ -35,6 +38,7 @@ export default function Gallery() {
       category: "Hardscaping",
       before: "Before: Empty space",
       after: "After: Outdoor gathering area",
+      image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663482553895/LPaz92cnRdeSnN7Fr9fQ49/fire-pit-KdRtp76uubcrdjmxboFLhP.webp",
     },
     {
       id: 5,
@@ -42,13 +46,15 @@ export default function Gallery() {
       category: "Maintenance",
       before: "Before: Patchy lawn",
       after: "After: Lush green grass",
+      image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663482553895/LPaz92cnRdeSnN7Fr9fQ49/maintenance-lawn-YxSn86wvxPeAEGhoq7bAK8hf.webp",
     },
     {
       id: 6,
-      title: "Seasonal Cleanup",
+      title: "Snow Removal Service",
       category: "Maintenance",
-      before: "Before: Fall debris",
-      after: "After: Clean landscape",
+      before: "Before: Heavy snow accumulation",
+      after: "After: Clear driveway & walkways",
+      image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663482553895/LPaz92cnRdeSnN7Fr9fQ49/snow-removal-9YhCSKQsmcL5RqHJYbBkwa.webp",
     },
   ];
 
@@ -105,12 +111,12 @@ export default function Gallery() {
                 onClick={() => setSelectedImageIndex(index)}
               >
                 <CardContent className="p-0">
-                  <div className="relative h-64 bg-gradient-to-br from-emerald-100 to-teal-100 flex flex-col items-center justify-center">
-                    <div className="text-center">
-                      <div className="text-4xl mb-2">🏞️</div>
-                      <p className="text-slate-600 font-semibold">{item.title}</p>
-                      <p className="text-sm text-slate-500 mt-2">{item.category}</p>
-                    </div>
+                  <div className="relative h-64 bg-gradient-to-br from-emerald-100 to-teal-100 flex flex-col items-center justify-center overflow-hidden">
+                    <img 
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                   <div className="p-4">
                     <div className="flex justify-between text-sm mb-3">
@@ -148,13 +154,12 @@ export default function Gallery() {
             </div>
 
             <div className="p-6">
-              <div className="bg-gradient-to-br from-emerald-100 to-teal-100 rounded-lg h-96 flex items-center justify-center mb-6">
-                <div className="text-center">
-                  <div className="text-6xl mb-4">🏞️</div>
-                  <p className="text-slate-600 text-lg font-semibold">
-                    {galleryItems[selectedImageIndex].title}
-                  </p>
-                </div>
+              <div className="bg-gradient-to-br from-emerald-100 to-teal-100 rounded-lg h-96 flex items-center justify-center mb-6 overflow-hidden">
+                <img 
+                  src={galleryItems[selectedImageIndex].image}
+                  alt={galleryItems[selectedImageIndex].title}
+                  className="w-full h-full object-cover"
+                />
               </div>
 
               <div className="grid md:grid-cols-2 gap-6 mb-6">

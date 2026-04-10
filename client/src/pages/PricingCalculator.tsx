@@ -70,7 +70,9 @@ export default function PricingCalculator() {
             <Link href="/pricing" className="text-slate-700 hover:text-emerald-600 transition font-semibold text-emerald-600">Pricing</Link>
             <Link href="/testimonials" className="text-slate-700 hover:text-emerald-600 transition">Testimonials</Link>
           </div>
-          <Button className="bg-emerald-600 hover:bg-emerald-700">Schedule Now</Button>
+          <a href="tel:+14105551234" className="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-2 rounded-lg font-semibold transition">
+            Call Now
+          </a>
         </div>
       </nav>
 
@@ -228,17 +230,22 @@ export default function PricingCalculator() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 px-4 bg-emerald-50">
-        <div className="container mx-auto max-w-2xl text-center">
-          <h3 className="text-3xl font-bold text-slate-900 mb-6">Ready to Start Your Project?</h3>
-          <p className="text-lg text-slate-600 mb-8">
+      <section className="py-20 px-4 bg-gradient-to-r from-emerald-600 to-teal-600 text-white">
+        <div className="container mx-auto max-w-3xl text-center">
+          <h2 className="text-4xl font-bold mb-6">Ready to Start Your Project?</h2>
+          <p className="text-xl text-emerald-50 mb-8">
             Contact us today to discuss your landscaping needs and get a detailed quote.
           </p>
-          <Link href="/contact">
-            <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700">
-              Contact Us Today
-            </Button>
-          </Link>
+          <div className="flex flex-col md:flex-row gap-4 justify-center">
+            <a href="tel:+14105551234" className="bg-white text-emerald-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-bold text-lg transition transform hover:scale-105 flex items-center justify-center gap-2">
+              Call (410) 555-1234
+            </a>
+            <Link href="/contact">
+              <Button size="lg" className="bg-emerald-800 hover:bg-emerald-900 text-white px-8 py-4">
+                Get Detailed Quote
+              </Button>
+            </Link>
+          </div>
         </div>
       </section>
 

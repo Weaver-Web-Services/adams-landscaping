@@ -1,38 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Hammer, Leaf, Wrench, Check } from "lucide-react";
+import { Leaf, CheckCircle2, ArrowRight, Phone } from "lucide-react";
 import { Link } from "wouter";
 
 export default function Services() {
-  const hardscapingServices = [
-    "Custom patio design and installation",
-    "Retaining walls and garden borders",
-    "Fire pits and outdoor fireplaces",
-    "Outdoor kitchens and dining areas",
-    "Pergolas and shade structures",
-    "Stone and brick work",
-  ];
-
-  const softscapingServices = [
-    "Professional garden design",
-    "Native plant selection and installation",
-    "Sod installation and seeding",
-    "Mulch and ground cover installation",
-    "Seasonal flower beds",
-    "Tree and shrub planting",
-  ];
-
-  const maintenanceServices = [
-    "Weekly and bi-weekly lawn care",
-    "Spring and fall seasonal cleanups",
-    "Irrigation system installation and maintenance",
-    "Snow removal and winter plowing",
-    "Leaf removal and debris cleanup",
-    "Landscape pruning and trimming",
-  ];
-
   return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-br from-slate-50 to-slate-100">
+    <div className="min-h-screen flex flex-col bg-white">
       {/* Navigation */}
       <nav className="bg-white shadow-sm sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
@@ -49,198 +22,334 @@ export default function Services() {
             <Link href="/pricing" className="text-slate-700 hover:text-emerald-600 transition">Pricing</Link>
             <Link href="/testimonials" className="text-slate-700 hover:text-emerald-600 transition">Testimonials</Link>
           </div>
-          <Button className="bg-emerald-600 hover:bg-emerald-700">Schedule Now</Button>
+          <a href="tel:+14105551234" className="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-2 rounded-lg font-semibold transition">
+            Call Now
+          </a>
         </div>
       </nav>
 
-      {/* Header */}
+      {/* Hero */}
       <section className="py-16 px-4 bg-gradient-to-r from-emerald-600 to-teal-600 text-white">
         <div className="container mx-auto max-w-4xl text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Our Services</h1>
-          <p className="text-xl text-emerald-50">Comprehensive landscaping solutions for your Baltimore home</p>
+          <p className="text-xl text-emerald-50">Complete landscaping solutions for every season and budget</p>
         </div>
       </section>
 
-      {/* Services Grid */}
-      <section className="py-16 px-4">
+      {/* Hardscaping */}
+      <section className="py-20 px-4 bg-white">
         <div className="container mx-auto max-w-5xl">
-          {/* Hardscaping */}
-          <div className="mb-16">
-            <div className="flex items-center gap-4 mb-8">
-              <Hammer className="w-10 h-10 text-emerald-600" />
-              <h2 className="text-3xl font-bold text-slate-900">Hardscaping</h2>
+          <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+            <div>
+              <div className="inline-block bg-amber-100 px-4 py-2 rounded-full mb-4">
+                <span className="text-amber-900 font-semibold">HARDSCAPING</span>
+              </div>
+              <h2 className="text-4xl font-bold text-slate-900 mb-6">Premium Hardscaping Solutions</h2>
+              <p className="text-lg text-slate-600 mb-6">
+                Transform your outdoor space with our expert hardscaping services. From stunning patios to functional retaining walls, we create lasting structures that enhance your property's beauty and value.
+              </p>
+
+              <div className="space-y-4 mb-8">
+                <div className="flex gap-3">
+                  <CheckCircle2 className="w-6 h-6 text-emerald-600 flex-shrink-0 mt-1" />
+                  <div>
+                    <h4 className="font-bold text-slate-900">Stone & Paver Patios</h4>
+                    <p className="text-slate-600 text-sm">Premium materials, expert installation, timeless designs</p>
+                  </div>
+                </div>
+                <div className="flex gap-3">
+                  <CheckCircle2 className="w-6 h-6 text-emerald-600 flex-shrink-0 mt-1" />
+                  <div>
+                    <h4 className="font-bold text-slate-900">Retaining Walls</h4>
+                    <p className="text-slate-600 text-sm">Structural integrity meets aesthetic appeal</p>
+                  </div>
+                </div>
+                <div className="flex gap-3">
+                  <CheckCircle2 className="w-6 h-6 text-emerald-600 flex-shrink-0 mt-1" />
+                  <div>
+                    <h4 className="font-bold text-slate-900">Fire Pits & Seating</h4>
+                    <p className="text-slate-600 text-sm">Create the perfect gathering space for your family</p>
+                  </div>
+                </div>
+                <div className="flex gap-3">
+                  <CheckCircle2 className="w-6 h-6 text-emerald-600 flex-shrink-0 mt-1" />
+                  <div>
+                    <h4 className="font-bold text-slate-900">Outdoor Kitchens</h4>
+                    <p className="text-slate-600 text-sm">Premium outdoor cooking and entertaining spaces</p>
+                  </div>
+                </div>
+              </div>
+
+              <Link href="/contact">
+                <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700">
+                  Request Hardscaping Quote <ArrowRight className="w-5 h-5 ml-2" />
+                </Button>
+              </Link>
             </div>
-            <p className="text-lg text-slate-600 mb-8">
-              Transform your outdoor space with durable, beautiful hardscape features. From elegant patios to functional outdoor kitchens, we create structures that enhance your property's value and enjoyment.
-            </p>
-            <div className="grid md:grid-cols-2 gap-8">
-              <Card className="border-0 shadow-lg">
-                <CardHeader>
-                  <CardTitle className="text-emerald-600">What We Offer</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-3">
-                    {hardscapingServices.map((service, idx) => (
-                      <li key={idx} className="flex items-start gap-3">
-                        <Check className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
-                        <span className="text-slate-700">{service}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-              <Card className="border-0 shadow-lg bg-emerald-50">
-                <CardHeader>
-                  <CardTitle className="text-emerald-600">Why Choose Us</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-3">
-                    <li className="flex items-start gap-3">
-                      <Check className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
-                      <span className="text-slate-700">Expert craftsmanship with 20 years of experience</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <Check className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
-                      <span className="text-slate-700">High-quality materials and proven techniques</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <Check className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
-                      <span className="text-slate-700">Custom designs tailored to your vision</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <Check className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
-                      <span className="text-slate-700">Competitive pricing with transparent estimates</span>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
+
+            <div className="relative h-96 rounded-lg overflow-hidden shadow-2xl">
+              <img 
+                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663482553895/LPaz92cnRdeSnN7Fr9fQ49/hardscape-patio-SAJy3h4Sd4k2hkqvdjbDwR.webp"
+                alt="Hardscaping"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
+        </div>
+      </section>
 
-          {/* Softscaping */}
-          <div className="mb-16">
-            <div className="flex items-center gap-4 mb-8">
-              <Leaf className="w-10 h-10 text-emerald-600" />
-              <h2 className="text-3xl font-bold text-slate-900">Softscaping</h2>
+      {/* Softscaping */}
+      <section className="py-20 px-4 bg-slate-50">
+        <div className="container mx-auto max-w-5xl">
+          <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+            <div className="relative h-96 rounded-lg overflow-hidden shadow-2xl order-2 md:order-1">
+              <img 
+                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663482553895/LPaz92cnRdeSnN7Fr9fQ49/softscape-garden-hJXrjGMidHBL6xMDRGdvhD.webp"
+                alt="Softscaping"
+                className="w-full h-full object-cover"
+              />
             </div>
-            <p className="text-lg text-slate-600 mb-8">
-              Bring natural beauty to your landscape with expert plant selection and installation. We specialize in native plants that thrive in Baltimore's climate while creating stunning garden designs.
-            </p>
-            <div className="grid md:grid-cols-2 gap-8">
-              <Card className="border-0 shadow-lg">
-                <CardHeader>
-                  <CardTitle className="text-emerald-600">What We Offer</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-3">
-                    {softscapingServices.map((service, idx) => (
-                      <li key={idx} className="flex items-start gap-3">
-                        <Check className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
-                        <span className="text-slate-700">{service}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-              <Card className="border-0 shadow-lg bg-emerald-50">
-                <CardHeader>
-                  <CardTitle className="text-emerald-600">Why Choose Us</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-3">
-                    <li className="flex items-start gap-3">
-                      <Check className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
-                      <span className="text-slate-700">Native plant expertise for sustainable landscapes</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <Check className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
-                      <span className="text-slate-700">Professional garden design consultation</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <Check className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
-                      <span className="text-slate-700">Quality plants and materials sourced locally</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <Check className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
-                      <span className="text-slate-700">Eco-friendly landscaping practices</span>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
+
+            <div className="order-1 md:order-2">
+              <div className="inline-block bg-green-100 px-4 py-2 rounded-full mb-4">
+                <span className="text-green-900 font-semibold">SOFTSCAPING</span>
+              </div>
+              <h2 className="text-4xl font-bold text-slate-900 mb-6">Beautiful Garden Design & Planting</h2>
+              <p className="text-lg text-slate-600 mb-6">
+                Create a vibrant, sustainable landscape with our expert softscaping services. We specialize in native plants, garden design, and creating outdoor spaces that thrive year-round.
+              </p>
+
+              <div className="space-y-4 mb-8">
+                <div className="flex gap-3">
+                  <CheckCircle2 className="w-6 h-6 text-emerald-600 flex-shrink-0 mt-1" />
+                  <div>
+                    <h4 className="font-bold text-slate-900">Custom Garden Design</h4>
+                    <p className="text-slate-600 text-sm">Personalized landscapes tailored to your vision</p>
+                  </div>
+                </div>
+                <div className="flex gap-3">
+                  <CheckCircle2 className="w-6 h-6 text-emerald-600 flex-shrink-0 mt-1" />
+                  <div>
+                    <h4 className="font-bold text-slate-900">Native Plant Selection</h4>
+                    <p className="text-slate-600 text-sm">Sustainable, low-maintenance plantings for Baltimore</p>
+                  </div>
+                </div>
+                <div className="flex gap-3">
+                  <CheckCircle2 className="w-6 h-6 text-emerald-600 flex-shrink-0 mt-1" />
+                  <div>
+                    <h4 className="font-bold text-slate-900">Sod Installation</h4>
+                    <p className="text-slate-600 text-sm">Instant, healthy green lawns for your property</p>
+                  </div>
+                </div>
+                <div className="flex gap-3">
+                  <CheckCircle2 className="w-6 h-6 text-emerald-600 flex-shrink-0 mt-1" />
+                  <div>
+                    <h4 className="font-bold text-slate-900">Landscape Beds</h4>
+                    <p className="text-slate-600 text-sm">Professional mulching and bed design</p>
+                  </div>
+                </div>
+              </div>
+
+              <Link href="/contact">
+                <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700">
+                  Request Softscaping Quote <ArrowRight className="w-5 h-5 ml-2" />
+                </Button>
+              </Link>
             </div>
           </div>
+        </div>
+      </section>
 
-          {/* Maintenance */}
-          <div className="mb-16">
-            <div className="flex items-center gap-4 mb-8">
-              <Wrench className="w-10 h-10 text-emerald-600" />
-              <h2 className="text-3xl font-bold text-slate-900">Maintenance</h2>
+      {/* Maintenance */}
+      <section className="py-20 px-4 bg-white">
+        <div className="container mx-auto max-w-5xl">
+          <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+            <div>
+              <div className="inline-block bg-lime-100 px-4 py-2 rounded-full mb-4">
+                <span className="text-lime-900 font-semibold">MAINTENANCE</span>
+              </div>
+              <h2 className="text-4xl font-bold text-slate-900 mb-6">Year-Round Maintenance Services</h2>
+              <p className="text-lg text-slate-600 mb-6">
+                Keep your landscape looking pristine with our comprehensive maintenance programs. From weekly lawn care to 24/7 emergency snow removal, we've got you covered every season.
+              </p>
+
+              <div className="space-y-4 mb-8">
+                <div className="flex gap-3">
+                  <CheckCircle2 className="w-6 h-6 text-emerald-600 flex-shrink-0 mt-1" />
+                  <div>
+                    <h4 className="font-bold text-slate-900">Weekly Lawn Care</h4>
+                    <p className="text-slate-600 text-sm">Mowing, edging, and professional lawn maintenance</p>
+                  </div>
+                </div>
+                <div className="flex gap-3">
+                  <CheckCircle2 className="w-6 h-6 text-emerald-600 flex-shrink-0 mt-1" />
+                  <div>
+                    <h4 className="font-bold text-slate-900">Seasonal Cleanup</h4>
+                    <p className="text-slate-600 text-sm">Spring and fall cleanup, leaf removal, debris hauling</p>
+                  </div>
+                </div>
+                <div className="flex gap-3">
+                  <CheckCircle2 className="w-6 h-6 text-emerald-600 flex-shrink-0 mt-1" />
+                  <div>
+                    <h4 className="font-bold text-slate-900">Irrigation Maintenance</h4>
+                    <p className="text-slate-600 text-sm">System checks, repairs, and seasonal adjustments</p>
+                  </div>
+                </div>
+                <div className="flex gap-3">
+                  <CheckCircle2 className="w-6 h-6 text-emerald-600 flex-shrink-0 mt-1" />
+                  <div>
+                    <h4 className="font-bold text-slate-900">24/7 Snow Removal</h4>
+                    <p className="text-slate-600 text-sm">Emergency snow plowing and ice management</p>
+                  </div>
+                </div>
+              </div>
+
+              <Link href="/contact">
+                <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700">
+                  Set Up Maintenance Plan <ArrowRight className="w-5 h-5 ml-2" />
+                </Button>
+              </Link>
             </div>
-            <p className="text-lg text-slate-600 mb-8">
-              Keep your landscape looking pristine year-round with our comprehensive maintenance services. From regular lawn care to seasonal cleanups and winter snow removal, we've got you covered.
-            </p>
-            <div className="grid md:grid-cols-2 gap-8">
-              <Card className="border-0 shadow-lg">
-                <CardHeader>
-                  <CardTitle className="text-emerald-600">What We Offer</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-3">
-                    {maintenanceServices.map((service, idx) => (
-                      <li key={idx} className="flex items-start gap-3">
-                        <Check className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
-                        <span className="text-slate-700">{service}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-              <Card className="border-0 shadow-lg bg-emerald-50">
-                <CardHeader>
-                  <CardTitle className="text-emerald-600">Why Choose Us</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-3">
-                    <li className="flex items-start gap-3">
-                      <Check className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
-                      <span className="text-slate-700">Reliable, consistent service every season</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <Check className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
-                      <span className="text-slate-700">24/7 emergency snow removal available</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <Check className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
-                      <span className="text-slate-700">Flexible scheduling to fit your needs</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <Check className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
-                      <span className="text-slate-700">Professional equipment and trained crew</span>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
+
+            <div className="relative h-96 rounded-lg overflow-hidden shadow-2xl">
+              <img 
+                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663482553895/LPaz92cnRdeSnN7Fr9fQ49/maintenance-lawn-YxSn86wvxPeAEGhoq7bAK8hf.webp"
+                alt="Maintenance"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
+        </div>
+      </section>
 
-          {/* CTA */}
-          <div className="text-center py-12 px-8 bg-emerald-50 rounded-lg border-2 border-emerald-200">
-            <h3 className="text-2xl font-bold text-slate-900 mb-4">Ready to Get Started?</h3>
-            <p className="text-slate-600 mb-6">Contact us today for a free consultation and custom quote.</p>
-            <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700">Schedule Your Consultation</Button>
+      {/* Featured Projects */}
+      <section className="py-20 px-4 bg-slate-50">
+        <div className="container mx-auto max-w-5xl">
+          <h2 className="text-4xl font-bold text-center text-slate-900 mb-4">Featured Projects</h2>
+          <p className="text-center text-slate-600 text-lg mb-16">
+            See how we've transformed Baltimore properties
+          </p>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <Card className="border-0 shadow-lg overflow-hidden">
+              <div className="h-64 bg-gradient-to-br from-slate-200 to-slate-300 relative overflow-hidden">
+                <img 
+                  src="https://d2xsxph8kpxj0f.cloudfront.net/310519663482553895/LPaz92cnRdeSnN7Fr9fQ49/retaining-wall-b7z334HP58fFmb7Nww8z9H.webp"
+                  alt="Retaining Wall Project"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <CardContent className="pt-6">
+                <h3 className="text-2xl font-bold text-slate-900 mb-2">Terraced Retaining Walls</h3>
+                <p className="text-slate-600 mb-4">
+                  Multi-level retaining walls with integrated planting and professional drainage system for a dramatic landscape transformation.
+                </p>
+                <div className="flex gap-2 flex-wrap">
+                  <span className="bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full text-sm font-semibold">Hardscaping</span>
+                  <span className="bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full text-sm font-semibold">Softscaping</span>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-0 shadow-lg overflow-hidden">
+              <div className="h-64 bg-gradient-to-br from-slate-200 to-slate-300 relative overflow-hidden">
+                <img 
+                  src="https://d2xsxph8kpxj0f.cloudfront.net/310519663482553895/LPaz92cnRdeSnN7Fr9fQ49/fire-pit-KdRtp76uubcrdjmxboFLhP.webp"
+                  alt="Fire Pit Project"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <CardContent className="pt-6">
+                <h3 className="text-2xl font-bold text-slate-900 mb-2">Premium Fire Pit Area</h3>
+                <p className="text-slate-600 mb-4">
+                  Beautiful stone fire pit with integrated seating and landscape lighting, creating the perfect outdoor entertaining space.
+                </p>
+                <div className="flex gap-2 flex-wrap">
+                  <span className="bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full text-sm font-semibold">Hardscaping</span>
+                  <span className="bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full text-sm font-semibold">Lighting</span>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="text-center mt-12">
+            <Link href="/gallery">
+              <Button size="lg" variant="outline" className="border-emerald-600 text-emerald-600 hover:bg-emerald-50">
+                View All Projects <ArrowRight className="w-5 h-5 ml-2" />
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Us */}
+      <section className="py-20 px-4 bg-white">
+        <div className="container mx-auto max-w-5xl">
+          <h2 className="text-4xl font-bold text-center text-slate-900 mb-16">Why Choose Adams Landscaping?</h2>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <Card className="border-0 shadow-lg">
+              <CardContent className="pt-6 text-center">
+                <div className="text-4xl font-bold text-emerald-600 mb-4">18+</div>
+                <h3 className="text-xl font-bold text-slate-900 mb-2">Years of Excellence</h3>
+                <p className="text-slate-600">
+                  Nearly two decades of proven experience serving Baltimore County and City
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-0 shadow-lg">
+              <CardContent className="pt-6 text-center">
+                <div className="text-4xl font-bold text-emerald-600 mb-4">5000+</div>
+                <h3 className="text-xl font-bold text-slate-900 mb-2">Happy Customers</h3>
+                <p className="text-slate-600">
+                  Thousands of satisfied homeowners trust us with their outdoor spaces
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-0 shadow-lg">
+              <CardContent className="pt-6 text-center">
+                <div className="text-4xl font-bold text-emerald-600 mb-4">4.9★</div>
+                <h3 className="text-xl font-bold text-slate-900 mb-2">Top Rated</h3>
+                <p className="text-slate-600">
+                  Consistently praised for quality, professionalism, and customer service
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-20 px-4 bg-gradient-to-r from-emerald-600 to-teal-600 text-white">
+        <div className="container mx-auto max-w-3xl text-center">
+          <h2 className="text-4xl font-bold mb-6">Ready to Get Started?</h2>
+          <p className="text-xl text-emerald-50 mb-8">
+            Contact us today for a free consultation and estimate
+          </p>
+          <div className="flex flex-col md:flex-row gap-4 justify-center">
+            <a href="tel:+14105551234" className="bg-white text-emerald-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-bold text-lg transition transform hover:scale-105 flex items-center justify-center gap-2">
+              <Phone className="w-5 h-5" /> Call (410) 555-1234
+            </a>
+            <Link href="/pricing">
+              <Button size="lg" className="bg-emerald-800 hover:bg-emerald-900 text-white px-8 py-4">
+                Get Free Estimate
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-slate-900 text-white py-12 px-4 mt-12">
-        <div className="container mx-auto max-w-4xl">
+      <footer className="bg-slate-900 text-white py-12 px-4">
+        <div className="container mx-auto max-w-5xl">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
               <h4 className="font-bold mb-4 flex items-center gap-2">
                 <Leaf className="w-5 h-5" /> Adams Landscaping
               </h4>
-              <p className="text-slate-400 text-sm">Serving Baltimore County and City since 2006.</p>
+              <p className="text-slate-400 text-sm">Serving Baltimore County and City since 2006. Built on hard work, integrity, and community commitment.</p>
             </div>
             <div>
               <h4 className="font-bold mb-4">Quick Links</h4>
@@ -248,22 +357,23 @@ export default function Services() {
                 <li><Link href="/services">Services</Link></li>
                 <li><Link href="/gallery">Gallery</Link></li>
                 <li><Link href="/about">About Us</Link></li>
+                <li><Link href="/testimonials">Testimonials</Link></li>
               </ul>
             </div>
             <div>
               <h4 className="font-bold mb-4">Contact</h4>
               <ul className="space-y-2 text-slate-400 text-sm">
-                <li><a href="tel:+14105551234">(410) 555-1234</a></li>
-                <li><a href="mailto:info@adamslandscaping.com">info@adamslandscaping.com</a></li>
+                <li><a href="tel:+14105551234" className="hover:text-emerald-400 transition">(410) 555-1234</a></li>
+                <li><a href="mailto:info@adamslandscaping.com" className="hover:text-emerald-400 transition">info@adamslandscaping.com</a></li>
               </ul>
             </div>
             <div>
               <h4 className="font-bold mb-4">Hours</h4>
-              <p className="text-slate-400 text-sm">Mon-Fri: 8am-6pm<br/>Sat: 9am-4pm<br/>Sun: Closed</p>
+              <p className="text-slate-400 text-sm">Mon-Fri: 8am-6pm<br/>Sat: 9am-4pm<br/>Sun: Closed<br/>Emergency: 24/7</p>
             </div>
           </div>
           <div className="border-t border-slate-800 pt-8 text-center text-slate-400 text-sm">
-            <p>&copy; 2024 Adams Landscaping. All rights reserved.</p>
+            <p>&copy; 2024 Adams Landscaping. All rights reserved. | Baltimore's Trusted Landscaping Experts Since 2006</p>
           </div>
         </div>
       </footer>

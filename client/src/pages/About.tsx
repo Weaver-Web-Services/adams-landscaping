@@ -22,7 +22,9 @@ export default function About() {
             <Link href="/pricing" className="text-slate-700 hover:text-emerald-600 transition">Pricing</Link>
             <Link href="/testimonials" className="text-slate-700 hover:text-emerald-600 transition">Testimonials</Link>
           </div>
-          <Button className="bg-emerald-600 hover:bg-emerald-700">Schedule Now</Button>
+          <a href="tel:+14105551234" className="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-2 rounded-lg font-semibold transition">
+            Call Now
+          </a>
         </div>
       </nav>
 
@@ -199,20 +201,21 @@ export default function About() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 px-4">
-        <div className="container mx-auto max-w-2xl text-center">
-          <h3 className="text-3xl font-bold text-slate-900 mb-6">Ready to Work With Us?</h3>
-          <p className="text-lg text-slate-600 mb-8">
-            Let's transform your outdoor space into something beautiful. Contact us today for a free consultation.
+      <section className="py-20 px-4 bg-gradient-to-r from-emerald-600 to-teal-600 text-white">
+        <div className="container mx-auto max-w-3xl text-center">
+          <h2 className="text-4xl font-bold mb-6">Join Thousands of Satisfied Customers</h2>
+          <p className="text-xl text-emerald-50 mb-8">
+            Experience the Adams Landscaping difference. Let us transform your outdoor space.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a href="tel:+14105551234" className="flex items-center gap-2 text-emerald-600 font-semibold text-lg hover:text-emerald-700">
-              <Phone className="w-5 h-5" /> (410) 555-1234
+          <div className="flex flex-col md:flex-row gap-4 justify-center">
+            <a href="tel:+14105551234" className="bg-white text-emerald-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-bold text-lg transition transform hover:scale-105 flex items-center justify-center gap-2">
+              <Phone className="w-5 h-5" /> Call (410) 555-1234
             </a>
-            <span className="text-slate-400">|</span>
-            <a href="mailto:info@adamslandscaping.com" className="flex items-center gap-2 text-emerald-600 font-semibold text-lg hover:text-emerald-700">
-              <Mail className="w-5 h-5" /> info@adamslandscaping.com
-            </a>
+            <Link href="/contact">
+              <Button size="lg" className="bg-emerald-800 hover:bg-emerald-900 text-white px-8 py-4">
+                Get Free Estimate
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

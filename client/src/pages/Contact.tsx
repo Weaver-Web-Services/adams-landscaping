@@ -47,7 +47,9 @@ export default function Contact() {
             <Link href="/pricing" className="text-slate-700 hover:text-emerald-600 transition">Pricing</Link>
             <Link href="/testimonials" className="text-slate-700 hover:text-emerald-600 transition">Testimonials</Link>
           </div>
-          <Button className="bg-emerald-600 hover:bg-emerald-700">Schedule Now</Button>
+          <a href="tel:+14105551234" className="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-2 rounded-lg font-semibold transition">
+            Call Now
+          </a>
         </div>
       </nav>
 
