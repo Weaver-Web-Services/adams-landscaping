@@ -87,11 +87,13 @@ export default function Services() {
               </Link>
             </div>
 
-            <div className="relative h-96 rounded-lg overflow-hidden shadow-2xl">
+            <div className="relative h-96 rounded-lg overflow-hidden shadow-2xl bg-slate-100">
               <img 
-                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663482553895/LPaz92cnRdeSnN7Fr9fQ49/hardscape-patio-new-HPa3a2UkCXWtoq5rUggXei.webp"
-                alt="Hardscaping"
+                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663482553895/LPaz92cnRdeSnN7Fr9fQ49/hardscape-patio-new-GpmTFB2vAPXcxQ8JfQyVRC.png"
+                alt="Hardscaping - Professional stone patio installation"
                 className="w-full h-full object-cover"
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </div>
@@ -102,11 +104,13 @@ export default function Services() {
       <section className="py-20 px-4 bg-slate-50">
         <div className="container mx-auto max-w-5xl">
           <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
-            <div className="relative h-96 rounded-lg overflow-hidden shadow-2xl order-2 md:order-1">
+            <div className="relative h-96 rounded-lg overflow-hidden shadow-2xl order-2 md:order-1 bg-slate-100">
               <img 
-                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663482553895/LPaz92cnRdeSnN7Fr9fQ49/softscape-garden-new-HKBVHpuQAZ2du3kpZzhJPu.webp"
-                alt="Softscaping"
+                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663482553895/LPaz92cnRdeSnN7Fr9fQ49/softscape-garden-new-my5GPdDZhCBpXyAzMeKmqk.png"
+                alt="Softscaping - Beautiful garden design with native plants"
                 className="w-full h-full object-cover"
+                loading="lazy"
+                decoding="async"
               />
             </div>
 
@@ -211,11 +215,13 @@ export default function Services() {
               </Link>
             </div>
 
-            <div className="relative h-96 rounded-lg overflow-hidden shadow-2xl">
+            <div className="relative h-96 rounded-lg overflow-hidden shadow-2xl bg-slate-100">
               <img 
-                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663482553895/LPaz92cnRdeSnN7Fr9fQ49/maintenance-lawn-new-o4ZW7yC6jYviJoWL7LrUrw.webp"
-                alt="Maintenance"
+                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663482553895/LPaz92cnRdeSnN7Fr9fQ49/maintenance-lawn-new-AAitxQ7oFnmUw3wVcUM4pA.png"
+                alt="Maintenance - Professional lawn care with perfect striping"
                 className="w-full h-full object-cover"
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </div>
