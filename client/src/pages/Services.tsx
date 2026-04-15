@@ -89,7 +89,7 @@ export default function Services() {
 
             <div className="relative h-96 rounded-lg overflow-hidden shadow-2xl">
               <img 
-                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663482553895/LPaz92cnRdeSnN7Fr9fQ49/hardscape-patio-SAJy3h4Sd4k2hkqvdjbDwR.webp"
+                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663482553895/LPaz92cnRdeSnN7Fr9fQ49/hardscape-patio-new-HPa3a2UkCXWtoq5rUggXei.webp"
                 alt="Hardscaping"
                 className="w-full h-full object-cover"
               />
@@ -104,7 +104,7 @@ export default function Services() {
           <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
             <div className="relative h-96 rounded-lg overflow-hidden shadow-2xl order-2 md:order-1">
               <img 
-                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663482553895/LPaz92cnRdeSnN7Fr9fQ49/softscape-garden-hJXrjGMidHBL6xMDRGdvhD.webp"
+                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663482553895/LPaz92cnRdeSnN7Fr9fQ49/softscape-garden-new-HKBVHpuQAZ2du3kpZzhJPu.webp"
                 alt="Softscaping"
                 className="w-full h-full object-cover"
               />
@@ -213,7 +213,7 @@ export default function Services() {
 
             <div className="relative h-96 rounded-lg overflow-hidden shadow-2xl">
               <img 
-                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663482553895/LPaz92cnRdeSnN7Fr9fQ49/maintenance-lawn-YxSn86wvxPeAEGhoq7bAK8hf.webp"
+                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663482553895/LPaz92cnRdeSnN7Fr9fQ49/maintenance-lawn-new-o4ZW7yC6jYviJoWL7LrUrw.webp"
                 alt="Maintenance"
                 className="w-full h-full object-cover"
               />
