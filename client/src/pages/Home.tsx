@@ -1,12 +1,9 @@
-import { useAuth } from "@/_core/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Leaf, Award, Users, Clock, ArrowRight, CheckCircle2, Phone } from "lucide-react";
 import { Link } from "wouter";
 
 export default function Home() {
-  const { user } = useAuth();
-
   return (
     <div className="min-h-screen flex flex-col bg-white">
       {/* Navigation */}

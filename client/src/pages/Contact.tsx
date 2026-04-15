@@ -6,6 +6,8 @@ import { Link } from "wouter";
 import { useState } from "react";
 import { toast } from "sonner";
 
+const BUSINESS_EMAIL = "info@adamslandscaping.com";
+
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
@@ -25,8 +27,20 @@ export default function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success("Thank you for your inquiry! We'll contact you soon.");
-    setFormData({ name: "", email: "", phone: "", service: "", message: "" });
+
+    const subject = `Landscaping inquiry from ${formData.name}`;
+    const body = [
+      `Name: ${formData.name}`,
+      `Email: ${formData.email}`,
+      `Phone: ${formData.phone || "Not provided"}`,
+      `Service: ${formData.service || "Not specified"}`,
+      "",
+      "Project details:",
+      formData.message,
+    ].join("\n");
+
+    window.location.href = `mailto:${BUSINESS_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    toast.success("Opening your email app with your project details.");
   };
 
   return (
@@ -140,6 +154,9 @@ export default function Contact() {
               <h2 className="text-3xl font-bold text-slate-900 mb-8">Send us a Message</h2>
               <Card className="border-0 shadow-lg">
                 <CardContent className="pt-6">
+                  <p className="text-sm text-slate-600 mb-4">
+                    This opens your default email app with your project details pre-filled. No form data is stored on the site.
+                  </p>
                   <form onSubmit={handleSubmit} className="space-y-4">
                     <div>
                       <label className="block text-sm font-medium text-slate-700 mb-2">Name *</label>
@@ -204,7 +221,7 @@ export default function Contact() {
                       />
                     </div>
                     <Button type="submit" className="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-2">
-                      Send Message
+                      Open Email Draft
                     </Button>
                   </form>
                 </CardContent>
