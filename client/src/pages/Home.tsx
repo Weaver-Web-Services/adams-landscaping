@@ -203,7 +203,7 @@ export default function Home() {
             <Card className="border-0 shadow-lg hover:shadow-xl transition overflow-hidden">
               <div className="h-48 bg-gradient-to-br from-lime-100 to-green-100 flex items-center justify-center">
                 <img 
-                  src="https://d2xsxph8kpxj0f.cloudfront.net/310519663482553895/LPaz92cnRdeSnN7Fr9fQ49/maintenance-lawn-YxSn86wvxPeAEGhoq7bAK8hf.webp"
+                  src="https://d2xsxph8kpxj0f.cloudfront.net/310519663482553895/LPaz92cnRdeSnN7Fr9fQ49/maintenance-icon_17d446ed.png"
                   alt="Maintenance"
                   className="w-32 h-32 object-contain"
                   loading="lazy"
