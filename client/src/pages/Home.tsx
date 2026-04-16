@@ -171,7 +171,7 @@ export default function Home() {
             <Card className="border-0 shadow-lg hover:shadow-xl transition overflow-hidden">
               <div className="h-48 bg-gradient-to-br from-green-100 to-emerald-100 flex items-center justify-center">
                 <img 
-                  src="https://d2xsxph8kpxj0f.cloudfront.net/310519663482553895/LPaz92cnRdeSnN7Fr9fQ49/softscape-garden-hJXrjGMidHBL6xMDRGdvhD.webp"
+                  src="https://d2xsxph8kpxj0f.cloudfront.net/310519663482553895/LPaz92cnRdeSnN7Fr9fQ49/softscaping-icon_7c10a03d.png"
                   alt="Softscaping"
                   className="w-32 h-32 object-contain"
                   loading="lazy"
