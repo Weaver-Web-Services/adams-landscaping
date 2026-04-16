@@ -46,7 +46,7 @@ export default function Gallery() {
       category: "Maintenance",
       before: "Before: Patchy lawn",
       after: "After: Lush green grass",
-      image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663482553895/LPaz92cnRdeSnN7Fr9fQ49/maintenance-lawn-YxSn86wvxPeAEGhoq7bAK8hf.webp",
+      image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663482553895/LPaz92cnRdeSnN7Fr9fQ49/lawn-renovation-before-after_59464e03.png",
     },
     {
       id: 6,
