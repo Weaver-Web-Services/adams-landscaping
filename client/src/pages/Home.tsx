@@ -139,9 +139,10 @@ export default function Home() {
             <Card className="border-0 shadow-lg hover:shadow-xl transition overflow-hidden">
               <div className="h-48 bg-gradient-to-br from-amber-100 to-orange-100 flex items-center justify-center">
                 <img 
-                  src="https://d2xsxph8kpxj0f.cloudfront.net/310519663482553895/LPaz92cnRdeSnN7Fr9fQ49/service-icon-hardscape-HtV9UABSgzqJEWx8GbpZc.webp"
+                  src="https://d2xsxph8kpxj0f.cloudfront.net/310519663482553895/LPaz92cnRdeSnN7Fr9fQ49/hardscaping-icon_2142ca34.png"
                   alt="Hardscaping"
                   className="w-32 h-32 object-contain"
+                  loading="lazy"
                 />
               </div>
               <CardContent className="pt-6">
@@ -170,9 +171,10 @@ export default function Home() {
             <Card className="border-0 shadow-lg hover:shadow-xl transition overflow-hidden">
               <div className="h-48 bg-gradient-to-br from-green-100 to-emerald-100 flex items-center justify-center">
                 <img 
-                  src="https://d2xsxph8kpxj0f.cloudfront.net/310519663482553895/LPaz92cnRdeSnN7Fr9fQ49/service-icon-softscape-hCS7F2PCgrWCpFL85Qz5ir.webp"
+                  src="https://d2xsxph8kpxj0f.cloudfront.net/310519663482553895/LPaz92cnRdeSnN7Fr9fQ49/softscape-garden-hJXrjGMidHBL6xMDRGdvhD.webp"
                   alt="Softscaping"
                   className="w-32 h-32 object-contain"
+                  loading="lazy"
                 />
               </div>
               <CardContent className="pt-6">
@@ -201,9 +203,10 @@ export default function Home() {
             <Card className="border-0 shadow-lg hover:shadow-xl transition overflow-hidden">
               <div className="h-48 bg-gradient-to-br from-lime-100 to-green-100 flex items-center justify-center">
                 <img 
-                  src="https://d2xsxph8kpxj0f.cloudfront.net/310519663482553895/LPaz92cnRdeSnN7Fr9fQ49/service-icon-maintenance-koAbrsL3vjsJ7gryPzWi73.webp"
+                  src="https://d2xsxph8kpxj0f.cloudfront.net/310519663482553895/LPaz92cnRdeSnN7Fr9fQ49/maintenance-lawn-YxSn86wvxPeAEGhoq7bAK8hf.webp"
                   alt="Maintenance"
                   className="w-32 h-32 object-contain"
+                  loading="lazy"
                 />
               </div>
               <CardContent className="pt-6">
